@@ -17,8 +17,20 @@
             background-color: rgb(66, 99, 118);
             border-color: rgb(21, 60, 91);
         }
+        .dropdown-item{
+            color:rgb(66, 99, 118)
+        }
+        .blanco{
+            color: white;
+        }
         #carouselExampleIndicators{
             margin-top: 150px;
+        }
+        #navbarDropdown{
+            color:rgb(66, 99, 118)
+        }
+        #copy{
+            background-color: rgba(0, 0, 0, 0.2);
         }
     </style>
     <nav class="navbar navbar-expand-xl bg-white fixed-top">
@@ -26,16 +38,25 @@
             <img src="./images/logo.png" height="120px">
         </a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item px-5">
+            <li class="nav-item px-5 d-none d-sm-none d-md-none d-lg-block">
                 <a class="nav-link btn btn-primary"href="#">
                     <h2>Servicios</h2>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item d-none d-sm-none d-md-none d-lg-block">
                 <a class="nav-link btn-primary" href="#">
                     <h2>Contacto</h2>
                 </a>
             </li>
+            <li class="nav-item dropdown d-block d-sm-block d-md-block d-lg-none">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <h3>Menu</h3>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Servicios</a>
+                  <a class="dropdown-item" href="#">Contacto</a>
+                </div>
+              </li>
         </ul>
     </nav> 
 
@@ -49,19 +70,19 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="./images/carousel_1.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-sm-block">
-                    <h1 style="color:white; ">Despacho de contadores en Guadalajara</h1>
+                    <h1 class="blanco" >Despacho de contadores en Guadalajara</h1>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="./images/carousel_2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-sm-block">
-                    <h1 style="color:white">Contadores con años de experiencia</h1>
+                    <h1 class="blanco">Contadores con años de experiencia</h1>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="./images/carouesl_3.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-sm-block">
-                    <h1 style="color:white">Ponte al corriente con tus obligaciones fiscales</h1>
+                    <h1 class="blanco">Ponte al corriente con tus obligaciones fiscales</h1>
                 </div>
             </div>
         </div>
@@ -98,7 +119,11 @@
             <h2>Conoce más servicios</h2>
         </a>
     </div>
-    <div class="container">
-       <img src="./images/">
+    <br>
+    <footer class="bg-light text-center text-lg-start">
+        <div id="copy" class="text-center p-3">
+          © 2021 Copyright: Consultoría Estratégica Castro
+        </div>
+      </footer>
 </body>
 </html>
